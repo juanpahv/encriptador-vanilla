@@ -1,0 +1,129 @@
+:root{
+  --color-primario: #072b61;
+  --color-secundario: #606b7c;
+}
+
+* {
+  min-width: 0;
+  font: inherit;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.logo {
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
+.encriptador {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: none;
+  outline: none;
+  resize: none;
+  font-family: 'Roboto', sans-serif;
+  accent-color: var(--color-primario);
+  color: var(--color-primario);
+  font-size: 2rem;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+.encriptador::placeholder {
+  color: var(--color-primario);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons button {
+  width: 100%;
+  height: 100%;
+  margin-top: 1rem;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.buttons button:hover {
+  opacity: 0.7;
+  transition: ease-in-out 0.3s;
+}
+
+.btnEncriptar {
+  border: none;
+  background-color: var(--color-primario);
+  color: white;
+}
+
+.btnDesencriptar {
+  border: var(--color-primario) 1px solid;
+  color: var(--color-primario);
+}
+
+
+aside {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background-color: var(--color-secundario);
+  h2, p{
+    color: white;
+  }
+}
+
+/* Media Queries */
+/* Mobile */
+@media only screen and (max-width: 600px) {
+  main > section{
+    height: 100svh;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  aside {
+    
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 992px){
+  body {
+    max-height: 100svh;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .btnEncriptar {
+    margin-right: 1rem;
+  }
+  .btnDesencriptar {
+    margin-left: 1rem;
+  }
+}
